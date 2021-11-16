@@ -124,6 +124,7 @@ def main():
     frame.pack(side=tkinter.BOTTOM)
 
     open_file_dialog()
+    write_space_objects_data_to_file("save.txt", space_objects)
 
     start_button = tkinter.Button(frame, text="Start", command=start_execution, width=6)
     start_button.pack(side=tkinter.LEFT)
