@@ -117,14 +117,13 @@ def main():
 
     root = tkinter.Tk()
     # космическое пространство отображается на холсте типа Canvas
-    space = tkinter.Canvas(root, width=window_width, height=window_height, bg="black")
-    space.pack(side=tkinter.TOP)
+
     # нижняя панель с кнопками
     frame = tkinter.Frame(root)
     frame.pack(side=tkinter.BOTTOM)
 
-    open_file_dialog()
-    write_space_objects_data_to_file("save.txt", space_objects)
+    #open_file_dialog()
+    #write_space_objects_data_to_file("save.txt", space_objects)
 
     start_button = tkinter.Button(frame, text="Start", command=start_execution, width=6)
     start_button.pack(side=tkinter.LEFT)
@@ -147,6 +146,9 @@ def main():
     displayed_time.set(str(physical_time) + " seconds gone")
     time_label = tkinter.Label(frame, textvariable=displayed_time, width=30)
     time_label.pack(side=tkinter.RIGHT)
+
+    space = tkinter.Canvas(root, width=window_width, height=window_height, bg="black")
+    space.pack(side=tkinter.TOP)
 
     root.mainloop()
     print('Modelling finished!')
